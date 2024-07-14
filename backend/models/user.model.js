@@ -6,7 +6,7 @@ const userSchema= new mongoose.Schema({
         required:true,
         unique:true,
     },
-    fullName:{
+    fullname:{
         type: String,
         required: true,
     },
@@ -23,14 +23,14 @@ const userSchema= new mongoose.Schema({
     },
     followers:[
         {
-            type: mongoose.Schema.Types.objectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "User",
             default:[]
         }
     ],
     following:[
         {
-            type: mongoose.Schema.Types.objectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref: "User",
             default:[]
         }
